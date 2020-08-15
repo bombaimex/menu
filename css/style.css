@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredoka+One&family=Gloria+Hallelujah&family=Graduate&family=Nanum+Pen+Script&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allan&display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+text-decoration: none;
+}
+body{
+
+   background: url("https://expoboda.ideal.es/wp-content/uploads/2017/11/fondo-estrellas-difuso-300x300.png"); 
+/* background-image: url("https://expoboda.ideal.es/wp-content/uploads/2017/11/fondo-estrellas.png"); */
+  /*    color: #fff;  */
+    font-family: sans-serif;
+ /* background-size: cover;  */
+color:#0c0c09; 
+font-size: 20px;
+  
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 8px dashed #41413d;
+    margin:100px 100px ;
+    border-radius:30px;
+    
+}
+.container h1
+{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+
+    /* background: #fff; */
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+    color:#41413d;
+    text-shadow: 1px 1px  #f1f1f1 ;
+    transition: .2s;
+
+}
+.container h1:hover
+{
+    transform: scale(1.2);
+ 
+ }
+.container .title{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    color:rgb(155, 153, 113) ;
+    text-shadow: 2px 1px 15px  rgb(253, 241, 66);
+    font-weight: bold;
+}
+.fredoka
+{
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    letter-spacing: 12px;
+    text-align: center;
+}
+.container-product
+{
+display: grid;
+/* grid-row-gap:25px; */
+grid-template-columns: repeat(2,3fr);
+ /* grid-row-gap: 10px; */ 
+
+ 
+}
+.container-details
+{
+ /*     border: 1px solid red;  */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+  
+}
+.container-details h2 {
+    color: rgb(155, 153, 113);
+    text-shadow: 2px 1px 1px rgb(253, 241, 66) ;
+    letter-spacing: 3px;
+   /*  padding-top: -40px; */
+
+   text-align: center;
+}
+.container-details .text1
+{
+    font-family: 'Graduate', cursive;
+   /*  border: 1px solid rgb(0, 132, 255); */
+
+   
+}
+.container-details .text2
+{
+    font-family: 'Gloria Hallelujah', cursive;
+/*     border: 1px solid rgb(0, 140, 255); */
+    
+}
+/* .container-details ul
+{
+     
+     border: 1px solid rgb(183, 0, 255); 
+     
+    
+} */
+.container-details ul li
+{
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width:600px;
+} 
+.container-details ul li span:nth-child(1){
+    font-family: 'Allan', cursive;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.botanas
+{
+/*      border: 1px solid rgb(0, 89, 255);  */
+    height: 700px;
+}
+.botanas ul li
+{
+   
+    line-height: 33px;
+}
+.arepa{/* 
+   border: 1px solid rgb(21, 255, 0);  */
+    height: 700px;
+    font-size: 1.1rem;
+    line-height: 25px;
+   
+}
+
+.arepa ul li
+{
+    align-items: flex-start;
+}
+.empanadas
+{
+  /*   border: 1px solid rgb(255, 0, 242); */
+    height: 300px;
+}
+.empanadas-operadas,
+.endulzar
+{
+  /*   border: 1px solid rgb(255, 0, 242);
+    height: 300px; */
+   /*  margin-top: -150px; */
+   font-family: 'Allan', cursive;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 35px;
+   letter-spacing: 1px;
+   text-align: center;
+}
+.social-media{
+    /* border: 1px solid rgb(255, 251, 0);  */
+    height: 300px;
+    font-family: cursive;
+    letter-spacing: 1px;
+font-weight: bold;
+}
+
+
+
+
+
+.sm
+{
+margin: 0px 10px;
+}
+.sm a
+{
+display: inline-flex;
+width: 60px;
+height: 60px;
+justify-content: center;
+align-items: center;
+color: #0c0c09;
+transition: .4s;
+} 
+
+.icon
+{
+    width: 38px;
+    margin-top: 5px;
+}
+ .icon path
+{
+    fill: #0c0c09;
+    stroke-width: 0.1;
+    stroke: #0c0c09;
+    /* fill:  #0c0c09; */
+
+}
+.icon.fb path
+{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+}
+.icon.fb:hover path
+{
+    animation: animate-fb 1.5s linear forwards;
+}
+@keyframes animate-fb
+{
+    0%
+    {
+        stroke-width: 0.3;
+        stroke-dasharray: 0;
+        fill: transparent;
+    }
+    40%
+    {
+        stroke-width: 1;
+        stroke-dasharray: 10;
+        fill: transparent;
+    }
+    80%
+    {
+        stroke-dasharray: 30;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dasharray: 100;
+        fill: #0c0c09;
+    }
+}
+
+
+.icon.insta path
+{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+}
+.icon.insta:hover path
+{
+    animation: animate-insta 1.5s linear forwards;
+}
+@keyframes animate-insta
+{
+    0%
+    {
+        stroke-width: 0.3;
+        stroke-dasharray: 0;
+        fill: transparent;
+    }
+    40%
+    {
+        stroke-width: 1;
+        stroke-dasharray: 10;
+        fill: transparent;
+    }
+    80%
+    {
+        stroke-dasharray: 30;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dasharray: 100;
+        fill: #0c0c09;
+    }
+}
+.icon.twitter path
+{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+}
+.icon.twitter:hover path
+{
+    animation: animate-twitter 1.5s linear forwards;
+}
+@keyframes animate-twitter
+{
+    0%
+    {
+        stroke-width: 0.3;
+        stroke-dasharray: 0;
+        fill: transparent;
+    }
+    40%
+    {
+        stroke-width: 1;
+        stroke-dasharray: 10;
+        fill: transparent;
+    }
+    80%
+    {
+        stroke-dasharray: 30;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dasharray: 100;
+        fill: #0c0c09;
+    }
+}
+
+
+
+
+
+    @media (max-width: 1380px){
+        body{
+          font-size: 18px;
+          }
+          .fredoka
+          {
+              font-family: 'Fredoka One', cursive;
+              font-size: 17px;
+              letter-spacing: 10px;
+              text-align: center;
+          }
+        .container-details{
+            height: auto
+        }
+        .container{
+            
+            border: none;
+            
+            
+        }
+    
+    }
+
+@media (max-width: 800px){
+
+
+ .container-product
+{
+    margin:0 0 ;
+display: grid;
+/* grid-row-gap:25px; */
+grid-template-columns: 0.5fr;
+ /* grid-row-gap: 10px; */ 
+
+ 
+}
+.arepa{
+   
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+.arepa ul li
+{
+    align-items: center;
+    text-justify: auto;
+}
+
+}
+.img_bombai{
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* @media (max-width: 600px){
+
+    .container{
+            
+       
+
+            
+        }
+    }
+ */
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align-last: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.socio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-weight: bold;
+}
