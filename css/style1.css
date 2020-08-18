@@ -4,42 +4,47 @@
 {
     margin:0;
     padding: 0;
-text-decoration: none;
+    text-decoration: none;
 }
-body{
+:root{
+    --body:#0c0c09; 
+    --borde: #41413d;
 
-   background: url("https://expoboda.ideal.es/wp-content/uploads/2017/11/fondo-estrellas-difuso-300x300.png"); 
-/* background-image: url("https://expoboda.ideal.es/wp-content/uploads/2017/11/fondo-estrellas.png"); */
-  /*    color: #fff;  */
+}
+body
+{
+    background: url("https://expoboda.ideal.es/wp-content/uploads/2017/11/fondo-estrellas-difuso-300x300.png"); 
     font-family: sans-serif;
- /* background-size: cover;  */
-color:#0c0c09; 
-font-size: 20px;
-  
+    color:var(--body) ;
+    font-size: 20px;
+    margin:0;
+    padding: 0;
 }
 .container{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 8px dashed #41413d;
-    margin:100px 100px ;
+    border: 8px dashed var(--borde);
+     margin:100px 100px ;
     border-radius:30px;
-    
+   /*  min-width: 1200px; */
+}
+.img_bombai{
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
 }
 .container h1
 {
     font-family: 'Bungee Shade', cursive;
     font-size: 40px;
-
-    /* background: #fff; */
     border-radius: 20px;
     width: 150px;
     text-align: center;
-    color:#41413d;
+    color:var(--borde);
     text-shadow: 1px 1px  #f1f1f1 ;
     transition: .2s;
-
 }
 .container h1:hover
 {
@@ -64,15 +69,11 @@ font-size: 20px;
 .container-product
 {
 display: grid;
-/* grid-row-gap:25px; */
 grid-template-columns: repeat(2,3fr);
- /* grid-row-gap: 10px; */ 
-
- 
 }
 .container-details
 {
- /*     border: 1px solid red;  */
+  /*    border: 1px solid red;  */
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -83,30 +84,26 @@ grid-template-columns: repeat(2,3fr);
     color: rgb(155, 153, 113);
     text-shadow: 2px 1px 1px rgb(253, 241, 66) ;
     letter-spacing: 3px;
-   /*  padding-top: -40px; */
+  padding-top: -40px;
 
    text-align: center;
 }
 .container-details .text1
 {
     font-family: 'Graduate', cursive;
-   /*  border: 1px solid rgb(0, 132, 255); */
+  /*   border: 1px solid rgb(0, 132, 255);  */
 
    
 }
 .container-details .text2
 {
     font-family: 'Gloria Hallelujah', cursive;
-/*     border: 1px solid rgb(0, 140, 255); */
+   /*   border: 1px solid rgb(0, 140, 255); */
     
 }
-/* .container-details ul
-{
-     
+/* .container-details ul{
      border: 1px solid rgb(183, 0, 255); 
-     
-    
-} */
+}  */
 .container-details ul li
 {
    display: flex;
@@ -129,8 +126,8 @@ grid-template-columns: repeat(2,3fr);
 }
 .botanas ul li
 {
-   
     line-height: 33px;
+
 }
 .arepa{/* 
    border: 1px solid rgb(21, 255, 0);  */
@@ -146,14 +143,15 @@ grid-template-columns: repeat(2,3fr);
 }
 .empanadas
 {
-  /*   border: 1px solid rgb(255, 0, 242); */
+  /*   border: 1px solid rgb(255, 0, 242);  */
     height: 300px;
 }
 .empanadas-operadas,
 .endulzar
 {
-  /*   border: 1px solid rgb(255, 0, 242);
-    height: 300px; */
+    width: 600px;
+   /*  border: 1px solid rgb(68, 0, 255); */
+   /*  height: 300px; */ 
    /*  margin-top: -150px; */
    font-family: 'Allan', cursive;
    font-weight: bold;
@@ -161,13 +159,14 @@ grid-template-columns: repeat(2,3fr);
    line-height: 35px;
    letter-spacing: 1px;
    text-align: center;
+
 }
 .social-media{
-    /* border: 1px solid rgb(255, 251, 0);  */
+  /*    border: 1px solid rgb(255, 251, 0);  */ 
     height: 300px;
     font-family: cursive;
     letter-spacing: 1px;
-font-weight: bold;
+    font-weight: bold;
 }
 
 .sm
@@ -181,7 +180,7 @@ width: 60px;
 height: 60px;
 justify-content: center;
 align-items: center;
-color: #0c0c09;
+color: var(--body);;
 transition: .4s;
 } 
 
@@ -192,10 +191,10 @@ transition: .4s;
 }
  .icon path
 {
-    fill: #0c0c09;
+    fill: var(--body);;
     stroke-width: 0.1;
-    stroke: #0c0c09;
-    /* fill:  #0c0c09; */
+    stroke: var(--body);;
+    /* fill:  var(--body);; */
 
 }
 .icon.fb path
@@ -229,10 +228,9 @@ transition: .4s;
     100%
     {
         stroke-dasharray: 100;
-        fill: #0c0c09;
+        fill: var(--body);;
     }
 }
-
 
 .icon.insta path
 {
@@ -265,19 +263,19 @@ transition: .4s;
     100%
     {
         stroke-dasharray: 100;
-        fill: #0c0c09;
+        fill:  var(--body);
     }
 }
-.icon.twitter path
+.icon.what path
 {
     stroke-dasharray: 100;
     stroke-dashoffset: 0;
 }
-.icon.twitter:hover path
+.icon.what:hover path
 {
-    animation: animate-twitter 1.5s linear forwards;
+    animation: animate-what 1.5s linear forwards;
 }
-@keyframes animate-twitter
+@keyframes animate-what
 {
     0%
     {
@@ -299,80 +297,9 @@ transition: .4s;
     100%
     {
         stroke-dasharray: 100;
-        fill: #0c0c09;
+        fill: var(--body);;
     }
 }
-
-
-
-
-
-    @media (max-width: 1380px){
-        body{
-          font-size: 18px;
-          }
-          .fredoka
-          {
-              font-family: 'Fredoka One', cursive;
-              font-size: 17px;
-              letter-spacing: 10px;
-              text-align: center;
-          }
-        .container-details{
-            height: auto
-        }
-        .container{
-            
-            border: none;
-            
-            
-        }
-    
-    }
-
-@media (max-width: 800px){
-
-
- .container-product
-{
-    margin:0 0 ;
-display: grid;
-/* grid-row-gap:25px; */
-grid-template-columns: 0.5fr;
- /* grid-row-gap: 10px; */ 
-
- 
-}
-.arepa{
-   
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-}
-.arepa ul li
-{
-    align-items: center;
-    text-justify: auto;
-}
-
-}
-.img_bombai{
-    width: 200px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-/* @media (max-width: 600px){
-
-    .container{
-            
-       
-
-            
-        }
-    }
- */
-
 
 .footer{
     display: flex;
@@ -388,4 +315,168 @@ grid-template-columns: 0.5fr;
     align-items: center;
     font-family: cursive;
     font-weight: bold;
+}
+
+
+/* media */
+     @media (max-width: 1380px){
+        body{
+          font-size: 18px;
+          }
+          .fredoka
+          {
+              font-family: 'Fredoka One', cursive;
+               font-size: 29px;
+              letter-spacing: 10px;
+              text-align: center;
+          }
+       
+        .container{
+
+      /*      border: none; */
+     /*      width: 100vh; */
+          overflow: hidden;
+          margin: 0 0;
+         
+         
+        } 
+        .container-details{
+            height: auto;
+      
+         
+          
+        }
+        .container-details ul li
+{
+  
+    width:400px;
+}
+    } 
+
+
+    @media (max-width: 963px){
+        .container{
+border:none;
+         }
+
+         .container-product
+{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.container-details ul li
+{
+  
+    width:700px;
+} 
+    }
+
+
+
+    @media (max-width: 866px){
+         .menu 
+{
+/* background:#00ff02; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 600px;
+}
+    
+    .container-details ul li
+    {
+        width:600px;
+    } 
+}
+
+@media (max-width: 706px){
+    .menu 
+{
+
+width: 600px;
+}
+
+.container-details ul li
+{
+   width:600px;
+} 
+.empanadas-operadas,
+.endulzar
+{
+    width: 600px;
+}
+}
+@media (max-width: 649px){
+    .menu 
+{
+
+width: 400px;
+
+}
+
+.container-details ul li
+{
+   width:400px;
+
+} 
+.empanadas-operadas,
+.endulzar
+{
+ width: 400px;
+}
+}
+@media (max-width: 453px){
+    .menu 
+{
+width: 300px;
+}
+.container-details ul li
+{
+   width:300px;
+} 
+.empanadas-operadas,
+.endulzar
+{
+    width: 300px;
+}
+}
+@media (max-width: 351px){
+    .menu 
+{
+width: 200px;
+}
+.container-details ul li
+{
+   width:200px;
+} 
+.empanadas-operadas,
+.endulzar
+{
+   width: 200px;
+   font-size: 1rem;
+   text-align: center;
+}
+.arepa{
+     font-size: 1rem;
+ }
+ .footer span{
+text-align: center;
+ }
+ .img_bombai{
+    width: 180px;
+    
+}
+.address{
+   text-align: center;
+}
+.socio{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column-reverse;
+}
 }
